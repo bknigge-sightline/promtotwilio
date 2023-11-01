@@ -1,8 +1,0 @@
-.git
-.gitignore
-.env
-.env.example
-Dockerfile
-LICENSE.txt
-READNE.md
-Makefile

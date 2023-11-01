@@ -1,0 +1,13 @@
+[Unit]
+Description=Send Prometheus alerts as SMS via Twilio SMS API
+After=network.target
+
+[Service]
+Type=simple
+User=root
+EnvironmentFile=/etc/promtotwilio.conf
+ExecStart=/usr/local/bin/promtotwilio
+Restart=Always
+# next two lines are in Unit section on newer versions of systemd
+StartLimitInterval=300
+StartLimitBurst=5
